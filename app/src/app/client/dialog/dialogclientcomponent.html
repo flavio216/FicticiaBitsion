@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>{{ cliente != null ? 'Editar Usuario' : 'Nuevo Usuario'}}</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Id:</mat-label>
+        <input matInput [(ngModel)]="cliId">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Name:</mat-label>
+        <input placeholder="Name" type="text" matInput [(ngModel)]="cliName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Type Dni:</mat-label>
+        <input placeholder="Type Dni" type="number" matInput [(ngModel)]="cliDocDocumentType">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Dni:</mat-label>
+        <input placeholder="Dni" type="text" matInput [(ngModel)]="cliDni">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Gender:</mat-label>
+        <input placeholder="Gender" type="number" matInput [(ngModel)]="cliGenGender">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Drive?:</mat-label>
+        <input placeholder="Drive?" type="number" matInput [(ngModel)]="cliDrive">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>useGlasses?</mat-label>
+        <input placeholder="useGlasses?" type="number" matInput [(ngModel)]="cliUseGlasses">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>cliDiabetic:</mat-label>
+        <input placeholder="cliDiabetic" type="number" matInput [(ngModel)]="cliDiabetic">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>OtherDiseases?:</mat-label>
+        <input placeholder="OtherDiseases?" type="number" matInput [(ngModel)]="cliOtherDiseases">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Diseasses:</mat-label>
+        <input placeholder="Diseasses" type="text" matInput [(ngModel)]="cliDiseases">
+    </mat-form-field>
+    
+
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="close();">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="cliente != null ? editClient() : addClient();">Guardar</button>
+</div>
